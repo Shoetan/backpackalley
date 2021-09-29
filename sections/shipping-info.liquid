@@ -1,6 +1,6 @@
 <h3>{{ section.settings.ship-text }}</h3>
 <h6>{{ section.settings.shipping-text }}</h6>
-<div> {{ section.settings.my-img  }} </div>
+<img src="{{ section.settings.my-img | img_url:'master'}" alt="backpack image">
 
 {% schema %}
     {
