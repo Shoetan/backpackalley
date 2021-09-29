@@ -1,7 +1,6 @@
 <h3>{{ section.settings.ship-text }}</h3>
 <h6>{{ section.settings.shipping-text }}</h6>
-
-
+<div> {{ section.settings.my-img  }} </div>
 
 {% schema %}
     {
@@ -20,8 +19,14 @@
                     "label": "Explain yourself"
                   
         
+            },
+
+            {
+                 "type": "image_picker",
+                 "id": "my-img",
+                 "label": "Add your image"
             }
-        
+            
         ]
     }
 {% endschema %}
