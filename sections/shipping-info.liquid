@@ -1,17 +1,15 @@
 <h3>{{ section.settings.ship-text }}</h3>
 <h6>{{ section.settings.shipping-text }}</h6>
-<img src="{{ section.settings.my-img | img_url:'master'}" alt="backpack image">
 
-{% for block in section.blocks %}
- 
-<h6> {{ block.settings.team-member-text }} </h6>
-    
+{% for block in section.blocks %} 
+    <div>
+        <h1>{{ block.settings.bio }}</h1>
+    </div>
 {% endfor %}
 
 {% schema %}
     {
         "name": "information",
-         "max_blocks" : 5,
         "settings": [
             {
                 "type": "text",
@@ -30,24 +28,15 @@
 
             {
                  "type": "image_picker",
-                 "id": "my-img",
+                 "id": "image",
                  "label": "Add your image"
             }
             
         ]
-    },
-    "blocks": [
-        {
-            "type": "team",
-            "name": "team",
-            "settings": [
-                {
-                    "type": "text",
-                    "id": "team-member-text",
-                    "label": "TeamBio"
-                }
-        }
-    ]
+        
+
+    }
+    
     
 {% endschema %}
 
