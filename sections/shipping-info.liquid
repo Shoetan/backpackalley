@@ -1,10 +1,12 @@
 <h3>{{ section.settings.ship-text }}</h3>
 <h6>{{ section.settings.shipping-text }}</h6>
 
+<img src=" {{section.settings.image | img_url }} " alt="Image of a simple backpack">
+
 {% for block in section.blocks %} 
-    <div>
-        <h1>{{ block.settings.bio }}</h1>
-    </div>
+
+  <h6> {{block.settings.blk}} </h6>
+  
 {% endfor %}
 
 {% schema %}
@@ -32,7 +34,23 @@
                  "label": "Add your image"
             }
             
+        ],
+
+        "blocks": [
+            {
+                "type": "Slide",
+                "name": "slide",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "blk",
+                        "label": "Your text"
+                    }
+                    
+                ]
+            }
         ]
+        
         
 
     }
